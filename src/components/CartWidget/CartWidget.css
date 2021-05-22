@@ -1,0 +1,8 @@
+.CartWidget{
+    float: right;
+    margin: 0;
+}
+.quantity{
+    color: white;
+    font-weight: bold;
+}

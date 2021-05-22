@@ -1,0 +1,19 @@
+.topbar{
+    display: flex;
+    width:100%;
+    align-items: center;
+    background-color: brown;
+  }
+  .logo{
+    height:50px;
+    width: 50px;
+  }
+  .nombreTienda{
+
+  }
+  .shopping{
+    width: 35px;
+    float: right;
+
+
+  }

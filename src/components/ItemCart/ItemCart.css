@@ -1,0 +1,43 @@
+.itemCart{
+    display: inline-block;
+    background-color:lightgray;
+    padding: 7px;
+    width:auto;
+    height: auto;
+    margin: 10px;
+}
+.subItemCart{
+    
+    
+    font-size: 12px;
+    
+    
+}
+.remove{
+    float: right;
+}
+
+.drinkImgCart{
+width: 100px;
+height: 100px;;
+}
+
+.drinkImgCart img{
+    width: 100px;
+    height: 100px;
+}
+.subItemCart1{
+width: auto;
+display:inline-block;
+padding: 10px;
+}
+.subItemCart2{
+    width: auto;
+    display:inline-block;
+    padding: 10px;
+    }
+    .subItemCart3{
+        width: auto;
+        display:inline-block;
+        padding:10px;
+        }

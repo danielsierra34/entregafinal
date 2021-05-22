@@ -1,0 +1,21 @@
+.NavBar{
+  margin: auto;
+}
+  
+  .links{
+    display: flex;
+    list-style-type: none;
+  }
+  .link{
+    margin: 0 6px;
+  }
+    
+  .NavBar a{
+      color: burlywood;
+  }
+  a{
+    color:inherit
+  }
+  .seleccionado{
+    color:white
+  }

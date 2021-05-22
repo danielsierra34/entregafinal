@@ -1,0 +1,29 @@
+.category{
+    margin: auto;
+}
+.category .subBlock{
+    background-color:lightgray;
+    padding: 7px;
+    font-size: 12px;
+    min-width: 140px;
+    max-width: 140px;
+    margin: 10px;
+}
+.category h3{
+    text-align: center;
+}
+.category .img{
+    width: 100%;
+}
+.category .img img{
+    width: 100%;
+}
+.category .verMas{
+    text-align: center;
+    font-size: 13px;
+}
+.category .verMas a{
+    text-align: center;
+    font-size: 13px;
+    color:#463E3E
+}

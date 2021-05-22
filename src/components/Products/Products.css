@@ -1,0 +1,29 @@
+.product{
+    margin: auto;
+}
+.product .subBlock{
+    background-color:lightgray;
+    padding: 7px;
+    font-size: 12px;
+    min-width: 140px;
+    max-width: 140px;
+    margin: 10px;
+}
+.product h3{
+    text-align: center;
+}
+.product .img{
+    width: 100%;
+}
+.product .img img{
+    width: 100%;
+}
+.product .verMas{
+    text-align: center;
+    font-size: 13px;
+}
+.product .verMas a{
+    text-align: center;
+    font-size: 13px;
+    color:#463E3E
+}

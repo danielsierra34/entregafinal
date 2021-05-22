@@ -1,0 +1,14 @@
+.Brand{
+
+}
+.nombreTienda{
+    display: inline-block;
+    color:white;
+    font-family: 'Sriracha', cursive;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 10px;
+}
