@@ -1,14 +1,13 @@
-import './Cart.css';
-import { useEffect,useState,useContext } from 'react'
+import './CartList.css';
+import { useEffect,useState } from 'react'
 import {NavLink} from 'react-router-dom'
 import {ItemCart} from '../ItemCart/ItemCart.js'
 
-export const Cart = (props) => {
+export const CartList = ({items}) => {
 
   
     return(
-        <div className="Cart"> 
-  
+        <div className="CartList"> 
                                  
         </div> 
     )

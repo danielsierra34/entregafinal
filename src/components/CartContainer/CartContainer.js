@@ -1,32 +1,20 @@
 import loading from '../../triangles.svg'
 import './CartContainer.css';
-import { Cart } from '../Cart/Cart'
-import { useEffect,useState } from 'react'
+import { CartList } from '../CartList/CartList'
+import { useEffect,useState,useContext } from 'react'
 import { getFirestore } from '../../firebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {NavLink} from 'react-router-dom'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import {CartContext} from '../../context/CartContext'
+import {ItemCart} from '../ItemCart/ItemCart.js'
 
 export const CartContainer = (props) => {   
     const contexto=useContext(CartContext)
-    console.log(contexto)
     const [isLoading,setIsLoading] = useState(true)
-    const [categories, setCategories]= useState([])
-    const [hasCategories, setHasCategories]= useState(false)
-
-    useEffect(()=>{
-        const db=getFirestore() 
-        const categoryCollection=db.collection('categorias')
-        categoryCollection.get().then((response)=>{
-            setHasCategories(response.size>0)           
-            setCategories(response.docs.map((doc) => doc.data()))  
-            setIsLoading(false)                 
-        }).catch(
-            (error) => console.error ('Firestore Error: ', error)
-        )
-    },[]) 
-
+    useEffect( () =>{
+        setIsLoading(false)
+    },[contexto])
     return ( 
         
         <div className="CategoryListContainer">  
@@ -41,11 +29,22 @@ export const CartContainer = (props) => {
                     <div className="loading"><img src={loading}/></div>
                 ):(
                     <div>
-                        {hasCategories ? (
-                            <Cart categories={categories}/>
-                        ):(
-                            <p>No hay productos en tu carrito de compras</p>
-                        )}   
+                        {contexto.cart.length>0 ? (
+                            <div>
+                            {contexto.cart.map((detail) => (             
+                                <ItemCart detail={detail} remove={contexto.removeFromCart} increase={contexto.increase} decrease={contexto.decrease}/>        
+                            ))}
+                            <div className="xyz"> 
+                                Total: ${contexto.total}
+                            </div>
+                                <NavLink to={`/products/w`}>Seguir Comprando</NavLink> 
+                            </div>
+                        ) : (
+                            <div>
+                                <p>Tu carrito se encuentra vacio</p>
+                                <NavLink to={`/products/w`}>Ir a comprar</NavLink> 
+                            </div>
+                        )}
                     </div>    
                 )}                         
             </div>              

@@ -17,18 +17,18 @@ export const ItemCart = (props) => {
     },[deleteId])
 
     const removeItem = () => {
-        if (window.confirm(`Está seguro de eliminar el producto ${props.name} de su carrito?`)) {
-            setDeleteId(props.id)
+        if (window.confirm(`Está seguro de eliminar el producto ${props.detail.nombre} de su carrito?`)) {
+            setDeleteId(props.detail.id)
             //console.log(deleteId)
         }       
     }
 
     const increase = (e) => { 
-        props.increase(props.id)
+        props.increase(props.detail.id)
     }
 
     const decrease = (e) => {
-        props.decrease(props.id)
+        props.decrease(props.detail.id)
     }
 
 
@@ -39,13 +39,13 @@ export const ItemCart = (props) => {
             <div className="remove" onClick={removeItem}>X</div>
             <div className="subItemCart">
                 <h3>
-                    {props.name}            
+                    {props.detail.nombre}            
                 </h3>
                 <div className="subItemCart1">                
-                    <div className="drinkImgCart"><img src={props.img}/></div>   
-                    <div className="">Unit price: <b>$ {props.precio}</b></div>             
-                    <ItemCountCart quantity={props.quantity} increase={increase} decrease={decrease}/>
-                    <div className=""><b>Total: </b>$ {props.precio * props.quantity}</div> 
+                    <div className="drinkImgCart"><img src={props.detail.img}/></div>   
+                    <div className="">Unit price: <b>$ {props.detail.precio}</b></div>             
+                    <ItemCountCart quantity={props.detail.quantity} increase={increase} decrease={decrease}/>
+                    <h2>Total: $ {props.detail.precio * props.detail.quantity}</h2> 
                 </div>
             </div>      
         </div>

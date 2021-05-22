@@ -5,7 +5,7 @@ import {ProductsListContainer} from './components/ProductsListContainer/Products
 import {DetailContainer} from './components/DetailContainer/DetailContainer'
 import {Footer} from './components/Footer/Footer'
 import {Home} from './components/Home/Home'
-import {Cart} from './components/Cart/Cart'
+import {CartContainer} from './components/CartContainer/CartContainer'
 import {BrowserRouter, Switch, Route,BrowserHistory} from 'react-router-dom'
 
 
@@ -29,7 +29,7 @@ function App() {
             <DetailContainer/>
           </Route>
           <Route path="/cart">
-            <Cart/> 
+            <CartContainer/> 
           </Route>
         </Switch>
         <Footer />   

@@ -35,7 +35,7 @@ export const DetailContainer = (props) => {
         <div className="DetailContainer">  
             <div className="container">
                 <h1>
-                    <NavLink to={`/products/all`} className="goBack">
+                    <NavLink to={`/categories/`} className="goBack">
                         <FontAwesomeIcon icon={faAngleLeft} />
                     </NavLink>
                     {detail.nombre}

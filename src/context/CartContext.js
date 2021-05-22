@@ -3,7 +3,7 @@ import {createContext,useEffect,useState } from 'react'
 export const CartContext = createContext()
 export const CartProvider = (props) => {
     
-    const [cart,setCart]=useState([])   
+    const [cart,setCart]=useState([]) 
     const [quantityCart,setQuantityCart]=useState(0)
     const [total,setTotal]=useState(0)
 
