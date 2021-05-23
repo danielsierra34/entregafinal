@@ -27,3 +27,22 @@
     font-size: 13px;
     color:#463E3E
 }
+
+
+.CategoryList{
+    display:flex;
+    text-align: center;
+    margin-top: 20px;
+
+} 
+.CategoryListContainer .container{
+    
+    width: 100%;
+    margin-top: 0px;
+    height: auto;
+    overflow-x:auto;
+}
+
+.bebida{
+    color:white
+}

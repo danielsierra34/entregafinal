@@ -1,12 +1,12 @@
 import loading from '../../triangles.svg'
-import './DetailContainer.css';
+import './Detail.css';
 import { useEffect,useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getFirestore } from '../../firebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {NavLink} from 'react-router-dom'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
-import {Detail} from '../Detail/Detail'
+import {Detail} from './Detail'
 
 export const DetailContainer = (props) => {   
     const {productId} = useParams()

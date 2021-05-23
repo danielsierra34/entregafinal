@@ -1,5 +1,5 @@
-import './ProductsList.css';
-import { Products } from '../Products/Products'
+import './Products.css';
+import { Products } from './Products'
 import { useState } from 'react'
 
 export const ProductsList = ({products}) => {

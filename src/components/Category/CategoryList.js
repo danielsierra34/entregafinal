@@ -1,5 +1,5 @@
-import './CategoryList.css';
-import { Category } from '../Category/Category'
+import './Category.css';
+import { Category } from './Category'
 import { useState } from 'react'
 
 export const CategoryList = (props) => {

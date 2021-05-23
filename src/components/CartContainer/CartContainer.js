@@ -1,6 +1,5 @@
 import loading from '../../triangles.svg'
 import './CartContainer.css';
-import { CartList } from '../CartList/CartList'
 import { useEffect,useState,useContext } from 'react'
 import { getFirestore } from '../../firebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -37,12 +36,13 @@ export const CartContainer = (props) => {
                             <div className="xyz"> 
                                 Total: ${contexto.total}
                             </div>
-                                <NavLink to={`/products/w`}>Seguir Comprando</NavLink> 
+                                <NavLink to={`/categories/w`}>Seguir Comprando</NavLink> 
+                                <NavLink to={`/checkout/`}>Finalizar Compra</NavLink> 
                             </div>
                         ) : (
                             <div>
                                 <p>Tu carrito se encuentra vacio</p>
-                                <NavLink to={`/products/w`}>Ir a comprar</NavLink> 
+                                <NavLink to={`/categories/w`}>Ir a comprar</NavLink> 
                             </div>
                         )}
                     </div>    

@@ -1,8 +1,9 @@
 import './App.css';
 import {Header} from './components/Header/Header'
-import {CategoryListContainer} from './components/CategoryListContainer/CategoryListContainer'
-import {ProductsListContainer} from './components/ProductsListContainer/ProductsListContainer'
-import {DetailContainer} from './components/DetailContainer/DetailContainer'
+import {CategoryListContainer} from './components/Category/CategoryListContainer'
+import {ProductsListContainer} from './components/Products/ProductsListContainer'
+import {DetailContainer} from './components/Detail/DetailContainer'
+import {CheckoutContainer} from './components/CheckoutContainer/CheckoutContainer'
 import {Footer} from './components/Footer/Footer'
 import {Home} from './components/Home/Home'
 import {CartContainer} from './components/CartContainer/CartContainer'
@@ -28,8 +29,11 @@ function App() {
           <Route path="/detail/:productId">
             <DetailContainer/>
           </Route>
-          <Route path="/cart">
+          <Route path="/cart/">
             <CartContainer/> 
+          </Route>
+          <Route path="/checkout/">
+            <CheckoutContainer/> 
           </Route>
         </Switch>
         <Footer />   

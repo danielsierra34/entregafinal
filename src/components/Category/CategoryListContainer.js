@@ -1,6 +1,6 @@
 import loading from '../../triangles.svg'
-import './CategoryListContainer.css';
-import { CategoryList } from '../CategoryList/CategoryList'
+import './Category.css';
+import { CategoryList } from './CategoryList'
 import { useEffect,useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getFirestore } from '../../firebase';

@@ -27,3 +27,28 @@
     font-size: 13px;
     color:#463E3E
 }
+.ProductsList{
+    display:flex;
+    text-align: center;
+    margin-top: 20px;
+
+} 
+
+.ProductsListContainer{
+    width: 100%;
+    margin-top: 0px;
+    height: auto;
+}
+.ProductsListContainer .container{
+    width: 100%;
+    margin-top: 0px;
+    height: auto;
+    overflow-x:auto;
+}
+.loading{
+    padding-top: 100px;
+}
+
+.bebida{
+    color:white
+}
