@@ -1,6 +1,6 @@
 import './Detail.css';
 import { useEffect,useState,useContext } from 'react'
-import {ItemCountDetail} from '../ItemCountDetail/ItemCountDetail'
+import {ItemCountDetail} from './ItemCountDetail'
 import {CartContext} from '../../context/CartContext'
 import {NavLink} from 'react-router-dom'
 export const Detail = ({detail}) => { 

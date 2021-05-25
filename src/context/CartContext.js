@@ -10,11 +10,13 @@ export const CartProvider = (props) => {
     const addToCart = (item,cantidad) => {
         let newCart=[...cart];
         if(newCart.some(e => e.id === item.id)){
-            alert("el producto ya existe en tu carrito")
+            let foundIndex=newCart.findIndex(x => x.id == item.id);
+            console.log(newCart)
+            newCart[foundIndex].quantity += cantidad;
+            setCart([...newCart])
         }else{
             setCart([...newCart,{"id":item.id, "nombre":item.nombre, "img":item.img, "moneda" : item.moneda, "precio": item.precio, "quantity": cantidad   }])
-            alert("el producto se agrego a tu carrito")
-        }    
+        }
     }
       
     const removeFromCart = (itemId) => {
@@ -23,7 +25,7 @@ export const CartProvider = (props) => {
     }
     
     useEffect(() =>{
-        setQuantityCart(cart.length)
+        setQuantityCart(cart.reduce(( total, v ) =>total + v.quantity,0))
         setTotal(cart.reduce(( total, v ) =>total + v.precio*v.quantity,0))
     },[cart])
 
@@ -45,7 +47,7 @@ export const CartProvider = (props) => {
 
     
     return (
-        <CartContext.Provider value={{addToCart:addToCart, cart:cart,removeFromCart:removeFromCart, quantityCart:quantityCart, total:total, decrease:decrease, increase:increase }}>
+        <CartContext.Provider value={{addToCart:addToCart, cart:cart, removeFromCart:removeFromCart, quantityCart:quantityCart, total:total, decrease:decrease, increase:increase }}>
             {props.children}
         </CartContext.Provider>
     )

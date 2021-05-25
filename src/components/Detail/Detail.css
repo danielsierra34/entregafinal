@@ -39,3 +39,47 @@ text-align: center;
 .hidden{
     display: none;
 }
+
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-size: 12px;
+}
+.alert-danger{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-success{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.field{
+    height: 20px;
+    width:50px;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.ItemCount{ 
+    margin:auto;
+    text-align: center;
+    bottom: 2px;
+    width: 100%;
+}
+.addToCart{ 
+    padding: 2px 4px;
+    background-color: #463E3E;
+    color:white;
+    font-size: 13px;
+}

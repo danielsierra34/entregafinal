@@ -30,14 +30,14 @@ export const CartContainer = (props) => {
                     <div>
                         {contexto.cart.length>0 ? (
                             <div>
-                            {contexto.cart.map((detail) => (             
-                                <ItemCart detail={detail} remove={contexto.removeFromCart} increase={contexto.increase} decrease={contexto.decrease}/>        
-                            ))}
-                            <div className="xyz"> 
-                                Total: ${contexto.total}
-                            </div>
-                                <NavLink to={`/categories/w`}>Seguir Comprando</NavLink> 
-                                <NavLink to={`/checkout/`}>Finalizar Compra</NavLink> 
+                                {contexto.cart.map((detail) => (             
+                                    <ItemCart detail={detail} remove={contexto.removeFromCart} increase={contexto.increase} decrease={contexto.decrease}/>        
+                                ))}
+                                <div className="xyz"> 
+                                    Total: ${contexto.total}
+                                </div>
+                                <NavLink className="botonx" to={`/categories/w`}>Seguir Comprando</NavLink> 
+                                <NavLink className="botonx" to={`/checkout/`}>Finalizar Compra</NavLink> 
                             </div>
                         ) : (
                             <div>

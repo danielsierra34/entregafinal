@@ -1,0 +1,26 @@
+.CheckoutContainer{
+    text-align: center;
+}
+.CheckoutContainer .formFinalizar{
+    width: 80%;
+    margin: auto;
+    max-width: 700px;
+    }
+.CheckoutContainer .formFinalizar .campo{
+    margin-top: 4px;
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border:1px solid grey;
+    display: block;
+    width: 100%;
+    }
+.CheckoutContainer .formFinalizar label{
+    display: block;
+    color: #2d2d2d;
+    font-family: 'Sriracha', cursive;
+    }
+.CheckoutContainer .formFinalizar .textGroup{
+    margin: 8px 8px;
+    text-align: left;
+    }

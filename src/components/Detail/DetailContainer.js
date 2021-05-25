@@ -16,7 +16,7 @@ export const DetailContainer = (props) => {
 
     useEffect(()=>{
         const db=getFirestore() 
-        const categoryCollection=db.collection('productos').where('id','==',productId)
+        const categoryCollection=db.collection('productos').where('idx','==',productId)
         categoryCollection.get().then((response)=>{
             setHasDetail(response.docs[0].data())           
             setDetail(response.docs[0].data()) 
