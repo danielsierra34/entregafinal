@@ -42,7 +42,6 @@ export const ItemCountDetail = ({onAdd,limit}) => {
     const handleOnAdd = (e)=>{
         if(cantidad>0){
             setAgregado(true)
-            console.log(onAdd(cantidad))
             if(onAdd(cantidad)){
                 setAlertaTipo("alert-success")
                 setAlertaTexto("Felicidades. El item se ha agregado a tu carrito")

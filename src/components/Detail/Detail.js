@@ -21,6 +21,7 @@ export const Detail = ({detail}) => {
           <div className="right">
             <div className="variables">
               <h2>$ {detail.precio} {detail.moneda}</h2>
+              <p>Disponibles: {detail.inventory}</p>
               <ItemCountDetail onAdd={handleOnAdd} limit={detail.inventory}/>
             <NavLink to={`/products/todos`}>Seguir comprando</NavLink>             
             </div>

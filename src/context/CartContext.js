@@ -8,19 +8,21 @@ export const CartProvider = (props) => {
     const [total,setTotal]=useState(0)
 
     const addToCart = (item,cantidad) => {
-        let newCart=[...cart];
-        if(newCart.some(e => e.id === item.id)){
-            let foundIndex=newCart.findIndex(x => x.id == item.id);
-            console.log(newCart)
+        let newCart=[...cart]
+        if(newCart.some(e => e.idx === item.idx)){
+            let foundIndex=newCart.findIndex(x => x.idx == item.idx);
+            console.log(1)
+            console.log(newCart[foundIndex])
+            console.log(1)
             newCart[foundIndex].quantity += cantidad;
             setCart([...newCart])
         }else{
-            setCart([...newCart,{"id":item.id, "nombre":item.nombre, "img":item.img, "moneda" : item.moneda, "precio": item.precio, "quantity": cantidad   }])
+            setCart([...newCart,{"idx":item.idx, "nombre":item.nombre, "img":item.img, "moneda" : item.moneda, "precio": item.precio, "quantity": cantidad, "inventory":item.inventory   }])
         }
     }
       
     const removeFromCart = (itemId) => {
-        const newCart = cart.filter((item) => item.id !== itemId)
+        const newCart = cart.filter((item) => item.idx !== itemId)
         setCart(newCart)
     }
     
@@ -31,14 +33,14 @@ export const CartProvider = (props) => {
 
     const increase = (itemId) => {
         const newCart=cart
-        newCart[newCart.findIndex(x => x.id === itemId)].quantity ++ //intentar con el ++ al final
+        newCart[newCart.findIndex(x => x.idx === itemId)].quantity ++ //intentar con el ++ al final
         setCart([...newCart])
     }
 
     const decrease = (itemId) => {
         const newCart=cart
-        if(newCart[newCart.findIndex(x => x.id === itemId)].quantity>1){
-            --newCart[newCart.findIndex(x => x.id === itemId)].quantity
+        if(newCart[newCart.findIndex(x => x.idx === itemId)].quantity>1){
+            --newCart[newCart.findIndex(x => x.idx === itemId)].quantity
             setCart([...newCart])
         }else{
             removeFromCart(itemId)

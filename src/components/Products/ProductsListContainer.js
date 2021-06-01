@@ -20,7 +20,8 @@ export const ProductsListContainer = (props) => {
         setIsLoading(true)
         const db=getFirestore() 
         const ProductsCollection=db.collection('productos').where("category",category=='todos'?'>':'==', category=='todos'?'':category);
-        ProductsCollection.get().then((response)=>{           
+        ProductsCollection.get().then((response)=>{   
+            console.log(response.docs)        
             setHasProducts(response.size>0)            
             setProducts(response.docs.map((doc) => doc.data()))  
             setTitulo(category==''?'nnnnnn':'Nuestro menú')

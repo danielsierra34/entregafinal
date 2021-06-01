@@ -18,17 +18,17 @@ export const ItemCart = (props) => {
 
     const removeItem = () => {
         if (window.confirm(`Está seguro de eliminar el producto ${props.detail.nombre} de su carrito?`)) {
-            setDeleteId(props.detail.id)
+            setDeleteId(props.detail.idx)
             //console.log(deleteId)
         }       
     }
 
     const increase = (e) => { 
-        props.increase(props.detail.id)
+        props.increase(props.detail.idx)
     }
 
     const decrease = (e) => {
-        props.decrease(props.detail.id)
+        props.decrease(props.detail.idx)
     }
 
 
