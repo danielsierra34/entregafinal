@@ -3,6 +3,8 @@
     width:100%;
     align-items: center;
     background-color: brown;
+    position: fixed;
+    top: 0;
   }
   .logo{
     height:50px;

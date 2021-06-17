@@ -17,7 +17,10 @@ export const NavBar=()=>{
               <NavLink to={`/products/todos`} activeClassName="seleccionado" className="normal">Products</NavLink>
             </li>
             <li className="link">
-              <NavLink to={`/checkout`} activeClassName="seleccionado" className="normal">Products</NavLink>
+              <NavLink to={`/checkout`} activeClassName="seleccionado" className="normal">Checkout</NavLink>
+            </li>
+            <li className="link">
+              <NavLink to={`/admin`} activeClassName="seleccionado" className="normal">Admin</NavLink>
             </li>
           </ul>
         </nav> 

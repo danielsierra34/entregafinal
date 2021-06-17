@@ -20,7 +20,7 @@ export const Home = (props) => {
     useEffect(()=>{
         setTimeout(function(){ 
             setAnimacionFinalizada(true)
-         }, 30000);
+         }, 3000);
     },[])
 
 

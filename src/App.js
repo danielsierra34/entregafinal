@@ -7,6 +7,7 @@ import {CheckoutContainer} from './components/Checkout/CheckoutContainer'
 import {Footer} from './components/Footer/Footer'
 import {Home} from './components/Home/Home'
 import {CartContainer} from './components/CartContainer/CartContainer'
+import {AdminContainer} from './components/Admin/AdminContainer'
 import {BrowserRouter, Switch, Route,BrowserHistory} from 'react-router-dom'
 
 
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/checkout/">
             <CheckoutContainer/> 
+          </Route>
+          <Route path="/admin/">
+            <AdminContainer/> 
           </Route>
         </Switch>
         <Footer />   
